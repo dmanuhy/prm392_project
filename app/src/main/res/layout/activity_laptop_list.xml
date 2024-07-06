@@ -7,10 +7,98 @@
     android:layout_height="match_parent"
     tools:context=".LaptopListActivity">
 
+
+    <ImageView
+        android:id="@+id/banner_img"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/blue_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner_img" />
+
+    <ImageView
+        android:id="@+id/policy_img"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_img"
+        app:srcCompat="@drawable/policy_img" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/policy_img">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:divider="@drawable/horizontal_devider"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:showDividers="middle">
+
+            <ImageView
+                android:id="@+id/brand_hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_hp" />
+
+            <ImageView
+                android:id="@+id/brand_acer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_acer" />
+
+            <ImageView
+                android:id="@+id/brand_asus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_asus" />
+
+            <ImageView
+                android:id="@+id/brand_dell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_dell" />
+
+            <ImageView
+                android:id="@+id/brand_leveno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_leveno" />
+
+            <ImageView
+                android:id="@+id/brand_msi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_msi" />
+
+            <ImageView
+                android:id="@+id/brand_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/brand_mac" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/laptopListRcv"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

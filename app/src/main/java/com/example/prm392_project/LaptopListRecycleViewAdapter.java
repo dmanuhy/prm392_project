@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import com.bumptech.glide.Glide;
+
 public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopListRecycleViewAdapter.VH> {
 
     private List<Laptop> data;
@@ -45,7 +47,7 @@ public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopLis
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, Laptop.class);
+                Intent i = new Intent(context, LaptopDetailActivity.class);
 //                i.putExtra("id", String.valueOf(p.getId()));
 //                i.putExtra("name", p.getName());
 //                i.putExtra("description", p.getDescription());
@@ -67,7 +69,7 @@ public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopLis
     protected class VH extends RecyclerView.ViewHolder {
         private ImageView laptopItemImg;
         private TextView laptopItemName;
-        private TextView laptopItemBrand;
+        private ImageView laptopItemBrand;
         private TextView laptopItemPrice;
 
         public VH(@NonNull View itemView) {
@@ -99,9 +101,35 @@ public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopLis
 
 
         public void setData(Laptop laptop) {
-            laptopItemImg.setImageResource(R.drawable.laptop_fake);
+            Glide.with(context).load(laptop.getImageUrl())
+                    .error(R.drawable.img_placeholder)
+                    .placeholder(R.drawable.img_placeholder)
+                    .into(laptopItemImg);
             laptopItemName.setText(laptop.getName());
-            laptopItemBrand.setText(laptop.getBrand());
+            switch (laptop.getBrand().toLowerCase()) {
+                case "msi":
+                    laptopItemBrand.setImageResource(R.drawable.brand_msi);
+                    break;
+                case "hp":
+                    laptopItemBrand.setImageResource(R.drawable.brand_hp);
+                    break;
+                case "acer":
+                    laptopItemBrand.setImageResource(R.drawable.brand_acer);
+                    break;
+                case "asus":
+                    laptopItemBrand.setImageResource(R.drawable.brand_asus);
+                    break;
+                case "lenovo":
+                    laptopItemBrand.setImageResource(R.drawable.brand_leveno);
+                    break;
+                case "macbook":
+                    laptopItemBrand.setImageResource(R.drawable.brand_mac);
+                    break;
+                case "dell":
+                    laptopItemBrand.setImageResource(R.drawable.brand_dell);
+                    break;
+            }
+
             laptopItemPrice.setText(String.valueOf(laptop.getPrice()));
         }
     }
