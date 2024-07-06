@@ -5,7 +5,7 @@ import android.widget.ImageView;
 public class Laptop {
     private int id;
     private String name;
-    private ImageView image;
+    private String imageUrl;
     private String brand;
     private int price;
     private String cpu;
@@ -14,14 +14,13 @@ public class Laptop {
     private String gpu;
     private String screen;
 
-    public Laptop(int id) {
-        this.id = id;
+    public Laptop() {
     }
 
-    public Laptop(int id, String name, ImageView image, String brand, int price, String cpu, String ram, String rom, String gpu, String screen) {
+    public Laptop(int id, String name, String imageUrl, String brand, int price, String cpu, String ram, String rom, String gpu, String screen) {
         this.id = id;
         this.name = name;
-        this.image = image;
+        this.imageUrl = imageUrl;
         this.brand = brand;
         this.price = price;
         this.cpu = cpu;
@@ -29,6 +28,14 @@ public class Laptop {
         this.rom = rom;
         this.gpu = gpu;
         this.screen = screen;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public int getId() {
@@ -47,13 +54,6 @@ public class Laptop {
         this.name = name;
     }
 
-    public ImageView getImage() {
-        return image;
-    }
-
-    public void setImage(ImageView image) {
-        this.image = image;
-    }
 
     public String getBrand() {
         return brand;

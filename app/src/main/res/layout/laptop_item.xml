@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="4dp">
+    android:layout_marginBottom="4dp"
+    android:background="@color/blue_light"
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/laptopItemImg"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,20 +22,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Laptop Name"
-        android:textSize="24dp"
+        android:textSize="20sp"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/laptopItemImg" />
 
-    <TextView
+    <ImageView
         android:id="@+id/laptopItemBrand"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:textAlignment="center"
-        android:text="Brand"
-        android:textSize="20dp"
-        android:fontWeight="600"
+        android:paddingVertical="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/laptopItemName" />
@@ -44,7 +45,10 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Price"
-        android:textSize="20dp"
+        android:textColor="@color/green"
+        android:textSize="17sp"
+        android:textFontWeight="700"
+        app:fontWeight="700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/laptopItemBrand" />
