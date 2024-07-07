@@ -12,11 +12,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 import com.bumptech.glide.Glide;
 
 public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopListRecycleViewAdapter.VH> {
+
+    private NumberFormat numberFormat = new DecimalFormat("#,###");
 
     private List<Laptop> data;
 
@@ -127,7 +131,7 @@ public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopLis
                     break;
             }
 
-            laptopItemPrice.setText(String.valueOf(laptop.getPrice()));
+            laptopItemPrice.setText(numberFormat.format(laptop.getPrice()) + " đ");
         }
     }
 

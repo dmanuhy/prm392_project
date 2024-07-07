@@ -60,7 +60,7 @@ public class LaptopListActivity extends AppCompatActivity {
     }
 
     private void customizeActionBar() {
-        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Laptop EZ - Chắc Thế</font>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Laptop EZ</font>"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
