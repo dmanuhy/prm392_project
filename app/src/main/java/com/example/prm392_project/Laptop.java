@@ -2,7 +2,9 @@ package com.example.prm392_project;
 
 import android.widget.ImageView;
 
-public class Laptop {
+import java.io.Serializable;
+
+public class Laptop implements Serializable {
     private int id;
     private String name;
     private String imageUrl;
