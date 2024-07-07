@@ -7,4 +7,422 @@
     android:layout_height="match_parent"
     tools:context=".LaptopDetailActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-37dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/laptopDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingVertical="10dp"
+                app:srcCompat="@drawable/img_placeholder" />
+
+            <TextView
+                android:id="@+id/laptopDetailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Laptop Gaming"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/laptopDetailPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textColor="@color/blue"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/blue"
+                android:text="THÊM VÀO GIỎ HÀNG" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/red"
+                android:text="MUA NGAY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:divider="@drawable/horizontal_devider"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_tick" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bảo hành chính hãng 24 tháng." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:divider="@drawable/horizontal_devider"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_tick" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hỗ trợ đổi mới trong 7 ngày." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:divider="@drawable/horizontal_devider"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_tick" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Windows bản quyền tích hợp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:divider="@drawable/horizontal_devider"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_tick" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Miễn phí giao hàng toàn quốc." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#f1f1f1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="18dp"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:background="@color/blue_light"
+                    android:text="Khuyễn mãi" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:divider="@drawable/horizontal_devider"
+                    android:showDividers="middle">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_plus" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Giảm ngay 100.000đ khi mua Miscrosoft Office kèm laptop tại Laptop EZ." />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:divider="@drawable/horizontal_devider"
+                    android:showDividers="middle">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_plus" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ưu đãi 50.000đ khi mua thêm túi chống sốc kèm Laptop." />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:divider="@drawable/horizontal_devider"
+                    android:showDividers="middle">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_plus" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ưu đãi 50.000đ khi mua đế tản nhiệt kèm Laptop." />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:divider="@drawable/horizontal_devider"
+                    android:showDividers="middle">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_plus" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ưu đãi 500.000đ khi nâng cấp RAM dành cho Laptop Gaming." />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22dp"
+                    android:padding="10dp"
+                    android:background="@color/yellow"
+                    android:text="Thông số kỹ thuật &amp; cấu hình" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="CPU" />
+
+                    <TextView
+                        android:id="@+id/laptopDetailCPU"
+                        style="@style/laptopConfigurationValue"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="RAM" />
+
+                    <TextView
+                        android:id="@+id/laptopDetailRAM"
+                        style="@style/laptopConfigurationValue"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Ổ cứng" />
+
+                    <TextView
+                        android:id="@+id/laptopDetailROM"
+                        style="@style/laptopConfigurationValue"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Card đồ họa" />
+
+                    <TextView
+                        android:id="@+id/laptopDetailGPU"
+                        style="@style/laptopConfigurationValue"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Màn hình" />
+
+                    <TextView
+                        android:id="@+id/laptopDetailScreen"
+                        style="@style/laptopConfigurationValue"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Cổng kết nối" />
+
+                    <TextView
+                        style="@style/laptopConfigurationValue"
+                        android:text="3x USB \n1x RJ - LAN \n1x HDMI \n1x Audio jac \n1x Type C USB" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Chuẩn Wi-Fi" />
+
+                    <TextView
+                        style="@style/laptopConfigurationValue"
+                        android:text="Wi-Fi 6(802.11ax) (Dual band) 2*2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Bluetooh" />
+
+                    <TextView
+                        style="@style/laptopConfigurationValue"
+                        android:text="v5.2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Webcam" />
+
+                    <TextView
+                        style="@style/laptopConfigurationValue"
+                        android:text="HD 720p" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/laptopConfigurationTitle"
+                        android:text="Pin" />
+
+                    <TextView
+                        style="@style/laptopConfigurationValue"
+                        android:text="90WHrs, 4S1P, 4-cell Li-ion" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,17 @@
 package com.example.prm392_project;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,15 +24,21 @@ import java.util.List;
 
 public class LaptopListActivity extends AppCompatActivity {
 
+    ActionBar actionBar;
+
     private List<Laptop> laptopList;
 
     private RecyclerView laptopListRcv;
 
     private void bindingView() {
         laptopListRcv = findViewById(R.id.laptopListRcv);
+        actionBar = getSupportActionBar();
     }
 
     private void bindingAction() {
+        ColorDrawable colorDrawable
+                = new ColorDrawable(Color.parseColor("#0079e5"));
+        actionBar.setBackgroundDrawable(colorDrawable);
     }
 
     @Override
@@ -40,8 +54,27 @@ public class LaptopListActivity extends AppCompatActivity {
 
         bindingView();
         bindingAction();
+        customizeActionBar();
         loadAllLaptop();
         initRecyclerView();
+    }
+
+    private void customizeActionBar() {
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Laptop EZ - Chắc Thế</font>"));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.navbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navbar, menu);
+        super.onCreateContextMenu(menu, v, menuInfo);
     }
 
     private void initRecyclerView() {

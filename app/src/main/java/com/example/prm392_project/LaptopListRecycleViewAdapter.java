@@ -48,10 +48,7 @@ public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopLis
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context, LaptopDetailActivity.class);
-//                i.putExtra("id", String.valueOf(p.getId()));
-//                i.putExtra("name", p.getName());
-//                i.putExtra("description", p.getDescription());
-//                i.putExtra("price", String.valueOf(p.getPrice()));
+                i.putExtra("laptopDetail", laptop);
                 context.startActivity(i);
             }
         });
