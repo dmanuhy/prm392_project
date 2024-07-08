@@ -108,27 +108,8 @@ public class LaptopListRecycleViewAdapter extends RecyclerView.Adapter<LaptopLis
                     .into(laptopItemImg);
             laptopItemName.setText(laptop.getName());
             switch (laptop.getBrand().toLowerCase()) {
-                case "msi":
-                    laptopItemBrand.setImageResource(R.drawable.brand_msi);
-                    break;
-                case "hp":
-                    laptopItemBrand.setImageResource(R.drawable.brand_hp);
-                    break;
-                case "acer":
-                    laptopItemBrand.setImageResource(R.drawable.brand_acer);
-                    break;
-                case "asus":
-                    laptopItemBrand.setImageResource(R.drawable.brand_asus);
-                    break;
-                case "lenovo":
-                    laptopItemBrand.setImageResource(R.drawable.brand_leveno);
-                    break;
-                case "macbook":
-                    laptopItemBrand.setImageResource(R.drawable.brand_mac);
-                    break;
-                case "dell":
-                    laptopItemBrand.setImageResource(R.drawable.brand_dell);
-                    break;
+                rce(R.drawable.brand_dell);
+                break;
             }
 
             laptopItemPrice.setText(numberFormat.format(laptop.getPrice()) + " đ");

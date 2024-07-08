@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -33,6 +34,10 @@ import com.bumptech.glide.Glide;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class LaptopDetailActivity extends AppCompatActivity {
 
@@ -40,11 +45,10 @@ public class LaptopDetailActivity extends AppCompatActivity {
 
     ActionBar actionBar;
 
-    Button addToCart;
-    Button buyNow;
-    Button call;
+    private SharedPreferences.Editor editor;
 
-    ImageView laptopDetailImage;
+    private SharedPreferences sharedPref;
+DetailImage;
 
     TextView laptopDetailName;
 
@@ -58,6 +62,9 @@ public class LaptopDetailActivity extends AppCompatActivity {
     private void bindingView() {
         actionBar = getSupportActionBar();
         numberFormat = new DecimalFormat("#,###");
+
+        sharedPref = getSharedPreferences("CART", MODE_PRIVATE);
+        editor = sharedPref.edit();
 
         addToCart = findViewById(R.id.btnAddToCart);
         buyNow = findViewById(R.id.btnBuyNow);
@@ -76,9 +83,10 @@ public class LaptopDetailActivity extends AppCompatActivity {
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#0079e5"));
         actionBar.setBackgroundDrawable(colorDrawable);
-
+        addToCart.setOnClickListener(this::handleAddToCart);
         call.setOnClickListener(this::handleCall);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +103,11 @@ public class LaptopDetailActivity extends AppCompatActivity {
         customizeActionBar();
         receiveIntent();
     }
+
+    private void handleAddToCart(View view) {
+        Toast.makeText(this, "Đã thêm sản phẩm vào giỏ hàng!", Toast.LENGTH_SHORT).show();
+    }
+
 
     private void customizeActionBar() {
         getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Laptop EZ</font>"));

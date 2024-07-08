@@ -5,16 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="4dp"
-    android:background="@color/blue_light"
-    android:padding="8dp">
-
-    <ImageView
-        android:id="@+id/laptopItemImg"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+    android:backgrounnt"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView

@@ -3,17 +3,7 @@
 
     <style name="laptopConfigurationTitle">
         <item name="android:layout_width">40dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:background">#f4f4f4</item>
-        <item name="android:layout_weight">0.5</item>
-    </style>
-
-    <style name="laptopConfigurationValue">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1.5</item>
+        <item nameem>
         <item name="android:textSize">16sp</item>
         <item name="android:padding">5dp</item>
     </style>
