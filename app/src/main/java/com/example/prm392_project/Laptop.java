@@ -8,14 +8,7 @@ public class Laptop implements Serializable {
     private int id;
     private String name;
     private String imageUrl;
-    private String brand;
-    private int price;
-    private String cpu;
-    private String ram;
-    private String rom;
-    private String gpu;
-    private String screen;
-
+    pri
     public Laptop() {
     }
 
